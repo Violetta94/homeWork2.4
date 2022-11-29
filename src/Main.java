@@ -24,11 +24,9 @@ public class Main {
         Bus volkswagenBus= new Bus("Volkswagen", "A5", 3f);
 
 
-        DriverB<PassengerCar> saxarov = new DriverB<>("Сахаров Максим Иванович", true,5);
-        saxarov.driverInfo(lada);
-        DriverC<Trucks> ivanov = new DriverC<>("Иванов Иван Иванович",true,2);
-        ivanov.driverInfo(fiatTrucks);
-        DriverD<Bus> anohin = new DriverD<>("Анахон Влад Владимирович", true, 10);
-        anohin.driverInfo(mercedec);
+        DriverB saxarov = new DriverB("Сахаров Максим Иванович", true,5,lada);
+        DriverC ivanov = new DriverC("Иванов Иван Иванович",true,2,fiatTrucks);
+        DriverD anohin = new DriverD("Анахон Влад Владимирович", true, 10,mercedec);
+        System.out.println(saxarov);
     }
 }

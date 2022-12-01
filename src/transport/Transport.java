@@ -52,6 +52,8 @@ public abstract class Transport {
         this.model = model;
     }
 
+    public abstract void printType ();
+
 /*    public abstract void refill();
 
 public int getYear() {

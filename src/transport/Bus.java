@@ -2,10 +2,28 @@ package transport;
 
 public class Bus extends Transport implements Competing{
 
-    public Bus(String brand, String model, float engineVolume) {
+    private Capacity capacity;
+
+    public Bus(String brand, String model, float engineVolume, Capacity capacity) {
         super(brand, model, engineVolume);
+        this.capacity = capacity;
     }
 
+    @Override
+    public void printType() {
+        if (capacity == null) {
+            System.out.println("Данных по авто недостаточно");
+        } else {
+            System.out.println("Мест в автобусе " + capacity.getFrom() + capacity.getTo()); }
+    }
+
+    public Capacity getCapacity() {
+        return capacity;
+    }
+
+        public void setCapacity(Capacity capacity) {
+            this.capacity = capacity;
+        }
     @Override
     public void startMoving() {
         System.out.println("start");
@@ -37,3 +55,5 @@ public class Bus extends Transport implements Competing{
         System.out.printf("Максимальная скорость автобуса %s %s  составила: %.1f км/ч.\n", getBrand(), getModel(), (100 + Math.random() * (100)));
     }
 }
+
+

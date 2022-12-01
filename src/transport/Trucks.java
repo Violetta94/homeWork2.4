@@ -2,8 +2,28 @@ package transport;
 
 public class Trucks extends Transport implements Competing{
 
-    public Trucks(String brand, String model, float engineVolume) {
+    private Weight weight;
+
+    public Trucks(String brand, String model, float engineVolume, Weight weight) {
         super(brand, model, engineVolume);
+        this.weight = weight;
+    }
+
+    @Override
+    public void printType() {
+        if (weight == null) {
+            System.out.println("Данных по авто недостаточно");
+        } else {
+            System.out.println("Грузоподъемность авто - " + weight.getFrom() + weight.getTo());
+        }
+    }
+
+    public Weight getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Weight weight) {
+        this.weight = weight;
     }
 
     public void startMoving() {

@@ -2,9 +2,30 @@ package transport;
 
 public class PassengerCar extends Transport implements Competing{
 
-    public PassengerCar(String brand, String model, float engineVolume) {
+    private TypeOfBody typeOfBody;
+
+
+    public PassengerCar(String brand, String model, float engineVolume, TypeOfBody typeOfBody) {
         super(brand, model, engineVolume);
+        this.typeOfBody = typeOfBody;
     }
+
+    @Override
+    public void printType() {
+        if (typeOfBody == null) {
+            System.out.println("Данных по авто недостаточно");
+        } else {
+            System.out.println("Тип авто - " + typeOfBody); }
+    }
+
+    public TypeOfBody getTypeOfBody() {
+        return typeOfBody;
+    }
+
+    public void setTypeOfBody(TypeOfBody typeOfBody) {
+        this.typeOfBody = typeOfBody;
+    }
+
     public void startMoving() {
         System.out.println("start");
     }

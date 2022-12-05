@@ -1,10 +1,13 @@
 import Drivers.DriverB;
 import Drivers.DriverC;
 import Drivers.DriverD;
+import exceptions.Data;
+import exceptions.WrongLoginException;
+import exceptions.WrongPasswordException;
 import transport.*;
 
 public class Main {
-    public static void main(String[] args) {
+public static void main(String[] args) {
         PassengerCar lada = new PassengerCar("Lada","Kalina", 1.7f, TypeOfBody.CROSSOVER);
         PassengerCar audi = new PassengerCar("Audi","A8 50 L TDI quattro", 1.7f, TypeOfBody.COPE);
         PassengerCar bmw = new PassengerCar("BMW", "Z8", 2f, TypeOfBody.HATCHBACK);
@@ -28,5 +31,21 @@ public class Main {
         System.out.println(saxarov);
         lada.printType();
         bmwBus.printType();
+    }
+
+    public static void checkTransport (Transport...transports) {
+       int count = 0;
+        for (Transport transport: transports) {
+                if (!transport.passDiagnostics()) {
+                        try {
+                                throw  new RuntimeException(transport.getBrand() + " " + transport.getModel() + " не прошел диагностику");
+                        } catch ( RuntimeException e) {
+                                System.out.println(e.getMessage());
+                        }
+                } else {
+                        count++;
+                }
+        }
+            System.out.println(count);
     }
 }

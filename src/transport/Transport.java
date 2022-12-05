@@ -5,6 +5,7 @@ public abstract class Transport {
     private  String model;
 
     private float engineVolume;
+    private boolean diagnosticsPassed;
 
   /*  private final int year;
     private final String country;
@@ -51,6 +52,10 @@ public abstract class Transport {
         }
         this.model = model;
     }
+    public boolean isDiagnosticsPassed() {
+        return diagnosticsPassed;
+    }
+    public abstract boolean passDiagnostics();
 
     public abstract void printType ();
 

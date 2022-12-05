@@ -9,6 +9,9 @@ public class Trucks extends Transport implements Competing{
         this.weight = weight;
     }
 
+    public boolean passDiagnostics() {
+        return this.isDiagnosticsPassed();
+    }
     @Override
     public void printType() {
         if (weight == null) {

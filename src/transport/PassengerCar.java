@@ -18,6 +18,9 @@ public class PassengerCar extends Transport implements Competing{
             System.out.println("Тип авто - " + typeOfBody); }
     }
 
+    public boolean passDiagnostics() {
+        return this.isDiagnosticsPassed();
+    }
     public TypeOfBody getTypeOfBody() {
         return typeOfBody;
     }

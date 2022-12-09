@@ -18,6 +18,11 @@ public class PassengerCar extends Transport implements Competing{
             System.out.println("Тип авто - " + typeOfBody); }
     }
 
+    @Override
+    public void refill() {
+
+    }
+
     public boolean passDiagnostics() {
         return this.isDiagnosticsPassed();
     }
@@ -36,6 +41,10 @@ public class PassengerCar extends Transport implements Competing{
     @Override
     public void finishMoving() {
         System.out.println("end");
+    }
+
+    public void repair() {
+
     }
 
     @Override

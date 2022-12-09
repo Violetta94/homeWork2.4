@@ -15,12 +15,21 @@ public class Bus extends Transport implements Competing{
         return false;
     }
 
+    public void repair() {
+
+    }
+
     @Override
     public void printType() {
         if (capacity == null) {
             System.out.println("Данных по авто недостаточно");
         } else {
             System.out.println("Мест в автобусе " + capacity.getFrom() + capacity.getTo()); }
+    }
+
+    @Override
+    public void refill() {
+
     }
 
     public Capacity getCapacity() {

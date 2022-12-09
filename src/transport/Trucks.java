@@ -21,8 +21,16 @@ public class Trucks extends Transport implements Competing{
         }
     }
 
+    @Override
+    public void refill() {
+
+    }
+
     public Weight getWeight() {
         return weight;
+    }
+    public void repair() {
+
     }
 
     public void setWeight(Weight weight) {

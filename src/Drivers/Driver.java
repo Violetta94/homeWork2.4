@@ -23,6 +23,12 @@ public abstract class Driver <T extends Transport> {
         this.car = car;
     }
 
+   /* public Driver(String fio, boolean hasDriverLicense, int experience) {
+        this.fio = fio;
+        this.hasDriverLicense = hasDriverLicense;
+        this.experience = experience;
+    }*/
+
     public void startMove() {
         System.out.printf("Водитель %s разгоняется.\n", getFio());
     }

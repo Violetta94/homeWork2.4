@@ -125,4 +125,8 @@ public abstract class Transport {
     public List<Sponsor> getSponsors() {
         return sponsors;
     }
+
+    public boolean service() {
+        return Math.random()>0.75;
+    }
 }

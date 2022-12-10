@@ -61,6 +61,11 @@ public static void main(String[] args) {
         printInfo(transport);
     }
 
+    ServiceStation serviceStation = new ServiceStation();
+    serviceStation.addCar(lada);
+    serviceStation.addTruck(volkswagenTrucks);
+    serviceStation.service();
+    serviceStation.service();
 
     }
 

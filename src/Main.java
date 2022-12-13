@@ -7,7 +7,9 @@ import exceptions.WrongLoginException;
 import exceptions.WrongPasswordException;
 import transport.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 public static void main(String[] args) {
@@ -55,7 +57,7 @@ public static void main(String[] args) {
 //        bmwBus.printType();
 
 
-    List<Transport> transports = List.of(lada, volkswagenTrucks, mercedec);
+    Set<Transport> transports = new HashSet<>();
 
     for (Transport transport: transports) {
         printInfo(transport);
